@@ -11,10 +11,13 @@ int main() {
 	erode(src, des2, kernel);
 	morphologyEx(src, des3, MORPH_OPEN, kernel);
 	morphologyEx(src, des4, MORPH_CLOSE, kernel);
-	namedWindow("形态学处理操作", WINDOW_NORMAL);
-	imshow("形态学处理操作", des1);
-	imshow("形态学处理操作", des2);
-	imshow("形态学处理操作", des3);
-	imshow("形态学处理操作", des4);
+	namedWindow("膨胀", WINDOW_NORMAL);
+	namedWindow("腐蚀", WINDOW_NORMAL);
+	namedWindow("开运算", WINDOW_NORMAL);
+	namedWindow("闭运算", WINDOW_NORMAL);
+	imshow("膨胀", des1);
+	imshow("腐蚀", des2);
+	imshow("开运算", des3);
+	imshow("闭运算", des4);
 	waitKey(0);
 }
